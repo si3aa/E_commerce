@@ -1,22 +1,22 @@
+import 'package:e_com/core/helpers/on_generate_route.dart';
+import 'package:e_com/features/splash_screen/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ECommerceApp());
+  runApp(const FruitHub());
 }
 
-class ECommerceApp extends StatelessWidget {
-  const ECommerceApp({super.key});
+class FruitHub extends StatelessWidget {
+  const FruitHub({super.key});
 
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+     onGenerateRoute: onGenerateRoute,
+     initialRoute: SplashView.routeName,
+      
     );
   }
 }
